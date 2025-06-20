@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>document</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f0f2f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .portal-container {
+      background: #fff;
+      padding: 30px 40px;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 400px;
+      display: inline-block;
+    }
+
+    .portal-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+      color: #555;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    .submit-btn {
+      width: 100%;
+      padding: 12px;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .submit-btn:hover {
+      background: #0056b3;
+    }
+    
+    #lo {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: #0a1de9;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+  </style>
+</head>
+<body> 
+  <div id="db"></div>
+  
+  <div class="portal-container">
+    <h2>Student Portal</h2>
+    <form>
+      <div class="form-group">
+        <label for="studentName">Student Name</label>
+        <input type="text" id="studentName" placeholder="Enter your name" >
+      </div>
+      <div class="form-group">
+        <label for="fatherName">Father's Name</label>
+        <input type="text" id="fatherName" placeholder="Enter father's name" >
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Enter your email" >
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" placeholder="Enter your phone number">
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Create a password">
+      </div>
+      <button type="button" onclick="f()" class="submit-btn">Register</button>
+    </form>
+  </div>
+
+
+  
+
+
+
+
+  <script src="app.js"></script>
+</body>
+</html>
+<br>

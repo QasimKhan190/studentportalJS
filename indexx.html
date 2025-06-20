@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>document</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background-color: #f0f4ff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .login-container {
+      background-color: white;
+      padding: 40px 30px;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 380px;
+    }
+
+    .login-container h2 {
+      text-align: center;
+      color: #0056b3;
+      margin-bottom: 25px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: #333;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    .login-btn {
+      width: 100%;
+      padding: 12px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .login-btn:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+  <h2>Login</h2>
+
+  <div class="form-group">
+    <label for="username">Name</label>
+    <input type="text" id="username" placeholder="Enter your name" />
+  </div>
+
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input type="password" id="password" placeholder="Enter your password" />
+  </div>
+
+  <button onclick="Login()" class="login-btn">Login</button>
+</div>
+
+  <script>
+function Login() {
+  let name = document.getElementById("username").value;
+  let pass = document.getElementById("password").value;
+
+  if (name === "" || pass === "") {
+    alert("Please enter both name and password.");
+    return;
+  }
+
+  let data = JSON.parse(localStorage.getItem("formData"));
+
+  if (data && name === data.names && pass === data.password) {
+    alert("Login successful!");
+  } else {
+    alert("Wrong name or password!");
+  }
+}
+
+  </script>
+</body>
+</html>
